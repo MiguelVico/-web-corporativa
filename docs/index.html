@@ -3,59 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodLogistic S.A.</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FoodLogístic S.A. | Líders en Distribució Alimentària</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER -->
     <header>
-        <h1>FoodLogistic S.A.</h1>
         <nav>
-            <a href="#inici">Inici</a>
-            <a href="#serveis">Serveis</a>
-            <a href="#contacte">Contacte</a>
+            <div class="logo">FoodLogístic S.A.</div>
+            <ul>
+                <li><a href="#inici">Inici</a></li>
+                <li><a href="#serveis">Serveis</a></li>
+                <li><a href="#nosaltres">Sobre nosaltres</a></li>
+                <li><a href="#contacte">Contacte</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- INICI -->
-    <section id="inici">
-        <h2>Benvinguts a FoodLogistic</h2>
-        <p>Som especialistes en logística alimentària, garantint qualitat i eficiència.</p>
+    <section id="inici" class="hero">
+        <div class="hero-content">
+            <h1>Innovació en Logística Alimentària</h1>
+            <p>Connectem productors i consumidors amb la màxima eficiència i seguretat a nivell nacional.</p>
+            <a href="#serveis" class="btn">Descobreix els nostres serveis</a>
+        </div>
     </section>
 
-    <!-- SERVEIS -->
-    <section id="serveis">
-        <h2>Els nostres serveis</h2>
-        <ul>
-            <li>Transport refrigerat</li>
-            <li>Distribució alimentària</li>
-            <li>Gestió de magatzems</li>
-        </ul>
+    <section id="serveis" class="container">
+        <h2 class="section-title">Els Nostres Serveis</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Alta Disponibilitat</h3>
+                <p>Garantim que la documentació i els albarans estiguin sempre accessibles per a transportistes i administratius.</p>
+            </div>
+            <div class="card">
+                <h3>Distribució Nacional</h3>
+                <p>Xarxa logística d'última generació amb seu central a Mataró cap a qualsevol punt del país.</p>
+            </div>
+            <div class="card">
+                <h3>Seguretat de Dades</h3>
+                <p>Compliment estricte amb la LOPDGDD i LSSI-CE per protegir la privacitat de clients i empleats.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- CONTACTE -->
-    <section id="contacte">
-        <h2>Contacte</h2>
-        <p>Email: info@foodlogistic.com</p>
-        <p>Telèfon: 123 456 789</p>
+    <section id="nosaltres" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Sobre nosaltres</h2>
+            <p>Amb seu a <strong>Mataró</strong>, FoodLogístic S.A. ha evolucionat per convertir-se en un referent del sector. Ens adaptem a les noves tecnologies per oferir solucions d'infraestructura robustes i col·laboració al núvol per als nostres equips.</p>
+        </div>
     </section>
 
-    <!-- FOOTER -->
+    <section id="contacte" class="container">
+        <h2 class="section-title">Contacte</h2>
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correu electrònic:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="tel">Telèfon de contacte:</label>
+                    <input type="tel" id="tel" name="tel" required>
+                </div>
+                <div class="form-group">
+                    <label for="missatge">Missatge:</label>
+                    <textarea id="missatge" name="missatge" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar missatge</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2026 FoodLogistic S.A.</p>
-        <p><a href="#">Política de privacitat</a></p>
+        <p>&copy; 2024 FoodLogístic S.A. - Mataró. Tots els drets reservats. | <a href="#">Política de Privacitat (LOPDGDD)</a></p>
     </footer>
 
-    <script src="script.js"></script>
-
-    <!-- STATCOUNTER -->
-    <script type="text/javascript">
-    var sc_project=12345678;
-    var sc_invisible=1;
-    var sc_security="abc123";
+    <script>
+        // Exemple de lloc per al codi de Statcounter
     </script>
-    <script src="https://www.statcounter.com/counter/counter.js"></script>
-
 </body>
 </html>
