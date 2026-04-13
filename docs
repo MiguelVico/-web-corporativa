@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLogistic S.A.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>FoodLogistic S.A.</h1>
+        <nav>
+            <a href="#inici">Inici</a>
+            <a href="#serveis">Serveis</a>
+            <a href="#contacte">Contacte</a>
+        </nav>
+    </header>
+
+    <!-- INICI -->
+    <section id="inici">
+        <h2>Benvinguts a FoodLogistic</h2>
+        <p>Som especialistes en logística alimentària, garantint qualitat i eficiència.</p>
+    </section>
+
+    <!-- SERVEIS -->
+    <section id="serveis">
+        <h2>Els nostres serveis</h2>
+        <ul>
+            <li>Transport refrigerat</li>
+            <li>Distribució alimentària</li>
+            <li>Gestió de magatzems</li>
+        </ul>
+    </section>
+
+    <!-- CONTACTE -->
+    <section id="contacte">
+        <h2>Contacte</h2>
+        <p>Email: info@foodlogistic.com</p>
+        <p>Telèfon: 123 456 789</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 FoodLogistic S.A.</p>
+        <p><a href="#">Política de privacitat</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- STATCOUNTER -->
+    <script type="text/javascript">
+    var sc_project=12345678;
+    var sc_invisible=1;
+    var sc_security="abc123";
+    </script>
+    <script src="https://www.statcounter.com/counter/counter.js"></script>
+
+</body>
+</html>
