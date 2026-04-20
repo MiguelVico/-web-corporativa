@@ -7,21 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<!-- Default Statcounter code for Miquel vico
-https://miguelvico.github.io/-web-corporativa/ -->
-<script type="text/javascript">
-var sc_project=13222721; 
-var sc_invisible=1; 
-var sc_security="35b23687"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js" async></script>
-<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
-Statcounter" href="https://statcounter.com/" target="_blank"><img
-class="statcounter" src="https://c.statcounter.com/13222721/0/35b23687/1/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code --><body>
+<body>
 
     <header>
         <nav class="nav-container">
@@ -59,8 +45,8 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
                 </div>
                 <div class="service-card">
                     <div class="icon">⚖️</div>
-                    <h3>Seguretat i LOPD</h3>
-                    <p>Compliment estricte de la normativa LOPDGDD i LSSI-CE per a la teva tranquil·litat.</p>
+                    <h3>Seguretat 100% Legal</h3>
+                    <p>Aplicació rigorosa de la LOPDGDD per protegir la privacitat de la teva empresa.</p>
                 </div>
             </div>
         </section>
@@ -92,6 +78,16 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
                         <label for="missatge">Missatge</label>
                         <textarea id="missatge" name="missatge" rows="4" placeholder="Com et podem ajudar?" required></textarea>
                     </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="check_privacitat" name="check_privacitat" required>
+                        <label for="check_privacitat">He llegit i accepto la <a href="#" class="open-modal" data-modal="modal-privacitat">Política de Privacitat</a>. (*Obligatori)</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="check_comunicacions" name="check_comunicacions">
+                        <label for="check_comunicacions">Autoritzo l'enviament de comunicacions comercials segons l'<a href="#" class="open-modal" data-modal="modal-avis">Avís Legal</a>.</label>
+                    </div>
+
                     <button type="submit" class="btn-submit">Enviar Sol·licitud</button>
                 </form>
             </div>
@@ -101,25 +97,60 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
     <footer>
         <div class="container">
             <p>&copy; 2024 FoodLogístic S.A. | Mataró.</p>
-            <p><small>Aquesta web compleix amb la normativa LOPDGDD i LSSI-CE.</small></p>
+            <div class="legal-links">
+                <a href="#" class="open-modal" data-modal="modal-avis">Avís Legal</a> | 
+                <a href="#" class="open-modal" data-modal="modal-privacitat">Política de Privacitat</a> | 
+                <a href="#" class="open-modal" data-modal="modal-cookies">Política de Cookies</a>
+            </div>
         </div>
     </footer>
 
     <div id="cookie-banner" class="cookie-banner">
-        <p>Utilitzem cookies per millorar la teva experiència. En continuar, acceptes la nostra 
-           <a href="#" id="open-privacy">Política de Privacitat</a>.</p>
+        <p>Aquesta web utilitza cookies pròpies i de tercers. En continuar, acceptes la nostra 
+           <a href="#" class="open-modal" data-modal="modal-cookies">Política de Cookies</a>.</p>
         <button id="accept-cookies" class="btn-cookie">Acceptar</button>
     </div>
 
-    <div id="privacy-modal" class="modal">
+    <div id="modal-avis" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2>Política de Privacitat - FoodLogístic S.A.</h2>
+            <h2>Avís Legal</h2>
             <div class="modal-body">
-                <p><strong>Responsable:</strong> FoodLogístic S.A. (Mataró)</p>
-                <p><strong>Finalitat:</strong> Gestió de consultes comercials i serveis de logística.</p>
-                <p><strong>Drets:</strong> Teniu dret a accedir, rectificar i suprimir les vostres dades personals segons el Reglament (UE) 2016/679 (RGPD) i la Llei Orgànica 3/2018 (LOPDGDD).</p>
-                <p>Les dades recollides mitjançant el formulari de contacte només s'utilitzaran per donar resposta a la vostra petició.</p>
+                <p><strong>Identitat del responsable:</strong> FoodLogístic S.A.</p>
+                <p><strong>NIF:</strong> A-12345678</p>
+                <p><strong>Adreça:</strong> Polígon Industrial, Mataró (Barcelona)</p>
+                <p><strong>Finalitat del lloc web:</strong> Informar sobre els serveis logístics de l'empresa i permetre el contacte als usuaris.</p>
+                <p><strong>Mesures de seguretat:</strong> El responsable ha adoptat les mesures tècniques i organitzatives necessàries per garantir la seguretat de les dades i evitar la seva alteració, pèrdua, tractament o accés no autoritzat, d'acord amb la LOPDGDD i LSSI-CE.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-privacitat" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Política de Privacitat</h2>
+            <div class="modal-body">
+                <p><strong>Bases legals del tractament:</strong> El consentiment exprés de l'interessat en marcar la casella corresponent al formulari de contacte.</p>
+                <p><strong>Destinataris:</strong> Les dades no se cediran a tercers, excepte per obligació legal o prestadors de serveis necessaris per al manteniment web.</p>
+                <p><strong>Temps de conservació:</strong> Les dades es conservaran mentre es mantingui la relació comercial o durant els anys necessaris per complir amb les obligacions legals.</p>
+                <p><strong>Exercici de Drets ARSLOP:</strong> Vostè té dret a exercir els drets d'<strong>A</strong>ccés, <strong>R</strong>ectificació, <strong>S</strong>upressió, <strong>L</strong>imitació del tractament, <strong>O</strong>posició i <strong>P</strong>ortabilitat enviant un correu a <em>privacitat@foodlogistic.es</em> adjuntant còpia del seu DNI.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-cookies" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Política de Cookies</h2>
+            <div class="modal-body">
+                <p><strong>Què són les cookies?</strong> Un fitxer que es descarrega al seu ordinador en accedir a determinades pàgines web.</p>
+                <p><strong>Quines utilitzem?</strong></p>
+                <ul>
+                    <li><em>Cookies tècniques (pròpies):</em> Necessàries per a la navegació i el bon funcionament de la web.</li>
+                    <li><em>Cookies d'anàlisi (tercers - StatCounter):</em> Permeten quantificar el nombre d'usuaris per fer un mesurament estadístic de l'ús de la web.</li>
+                </ul>
+                <p><strong>Durada:</strong> Les cookies de sessió s'esborren en tancar el navegador; les persistents (com StatCounter) poden durar fins a 2 anys.</p>
+                <p><strong>Com rebutjar-les:</strong> Vostè pot permetre, bloquejar o eliminar les cookies mitjançant la configuració de les opcions del navegador instal·lat al seu ordinador.</p>
             </div>
         </div>
     </div>
