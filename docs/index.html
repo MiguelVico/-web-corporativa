@@ -3,157 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodLogístic S.A. | Innovació i Logística Nacional</title>
+    <title>FoodLogístic S.A. | Líders en Distribució Alimentària</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <nav class="nav-container">
-            <div class="logo">Food<span>Logístic</span></div>
-            <ul class="nav-links">
-                <li><a href="#inici">Inici</a></li>
-                <li><a href="#serveis">Serveis</a></li>
-                <li><a href="#nosaltres">Sobre nosaltres</a></li>
-                <li><a href="#contacte">Contacte</a></li>
-            </ul>
-        </nav>
+        <div class="container navbar">
+            <div class="logo">
+                <h1>FoodLogístic<span>S.A.</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inici">Inici</a></li>
+                    <li><a href="#serveis">Serveis</a></li>
+                    <li><a href="#sobre-nosaltres">Sobre nosaltres</a></li>
+                    <li><a href="#contacte" class="btn-nav">Contacte</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="inici" class="hero">
-            <div class="hero-text">
-                <h1>Innovació en Logística Alimentària</h1>
-                <p>Especialistes en distribució nacional amb la màxima seguretat, eficiència i traçabilitat.</p>
-                <a href="#serveis" class="btn-primary">Descobreix els nostres serveis</a>
-            </div>
-        </section>
+    <section id="inici" class="hero">
+        <div class="container hero-content">
+            <h2>Connectem el país amb la millor logística alimentària</h2>
+            <p>Distribució nacional d'alta eficiència amb seu a Mataró. Innovació, seguretat i compromís en cada ruta.</p>
+            <a href="#contacte" class="btn-main">Sol·licita informació</a>
+        </div>
+    </section>
 
-        <section id="serveis" class="container">
-            <h2 class="section-title">Els Nostres Serveis</h2>
+    <section id="serveis" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Els Nostres Serveis</h2>
+                <p>Solucions logístiques adaptades a la nova era digital.</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="icon">🚚</div>
                     <h3>Distribució Nacional</h3>
-                    <p>Rutes optimitzades des de la nostra seu central a Mataró per a tot el territori nacional.</p>
+                    <p>Obertura de noves rutes i una flota optimitzada per arribar a qualsevol lloc a temps.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">🛡️</div>
+                    <div class="icon">🔒</div>
                     <h3>Alta Disponibilitat</h3>
-                    <p>Sistemes redundants per garantir l'accés crític a dades i albarans les 24 hores.</p>
+                    <p>Garantim que els nostres serveis crítics i dades estiguin sempre actius per als nostres clients.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">⚖️</div>
-                    <h3>Seguretat 100% Legal</h3>
-                    <p>Aplicació rigorosa de la LOPDGDD per protegir la privacitat de la teva empresa.</p>
+                    <div class="icon">☁️</div>
+                    <h3>Gestió al Núvol</h3>
+                    <p>Infraestructura moderna que connecta els nostres transportistes i administratius a l'instant.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="nosaltres" class="about-section">
-            <div class="container">
-                <h2>Sobre nosaltres</h2>
-                <p>FoodLogístic S.A. és una empresa líder amb seu a <strong>Mataró</strong>. Treballem per modernitzar la infraestructura logística mitjançant solucions d'alta disponibilitat i eines de col·laboració al núvol, assegurant la continuïtat del negoci i la protecció de dades.</p>
+    <section id="sobre-nosaltres" class="about">
+        <div class="container about-flex">
+            <div class="about-text">
+                <h2>Sobre Nosaltres</h2>
+                <p>Amb seu a Mataró, FoodLogístic S.A. s'ha consolidat com una empresa capdavantera en la distribució i logística alimentària a nivell nacional.</p>
+                <p>Arran del nostre creixement constant, estem modernitzant tota la nostra infraestructura per oferir la màxima seguretat de dades i continuïtat de negoci, complint estrictament amb la LOPDGDD i la LSSI-CE.</p>
             </div>
-        </section>
-
-        <section id="contacte" class="container">
-            <h2 class="section-title">Contacte</h2>
-            <div class="contact-wrapper">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="nom">Nom complet</label>
-                        <input type="text" id="nom" name="nom" placeholder="Escriu el teu nom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correu electrònic</label>
-                        <input type="email" id="email" name="email" placeholder="correu@exemple.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="tel">Telèfon</label>
-                        <input type="tel" id="tel" name="tel" placeholder="600 000 000" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="missatge">Missatge</label>
-                        <textarea id="missatge" name="missatge" rows="4" placeholder="Com et podem ajudar?" required></textarea>
-                    </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="check_privacitat" name="check_privacitat" required>
-                        <label for="check_privacitat">He llegit i accepto la <a href="#" class="open-modal" data-modal="modal-privacitat">Política de Privacitat</a>. (*Obligatori)</label>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="check_comunicacions" name="check_comunicacions">
-                        <label for="check_comunicacions">Autoritzo l'enviament de comunicacions comercials segons l'<a href="#" class="open-modal" data-modal="modal-avis">Avís Legal</a>.</label>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Enviar Sol·licitud</button>
-                </form>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3>+100</h3>
+                    <p>Rutes Actives</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Operatius</p>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section id="contacte" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacta amb Nosaltres</h2>
+                <p>Deixa'ns les teves dades i el nostre equip es posarà en contacte amb tu.</p>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="nom">Nom complet *</label>
+                    <input type="text" id="nom" name="nom" placeholder="Escriu el teu nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correu electrònic *</label>
+                    <input type="email" id="email" name="email" placeholder="correu@exemple.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefon">Telèfon de contacte *</label>
+                    <input type="tel" id="telefon" name="telefon" placeholder="600 000 000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="missatge">Missatge *</label>
+                    <textarea id="missatge" name="missatge" rows="5" placeholder="En què et podem ajudar?" required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="lopd" name="lopd" required>
+                    <label for="lopd">He llegit i accepto la <a href="#">Política de Privacitat</a> (LOPDGDD).</label>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar Missatge</button>
+                <p id="formFeedback" class="form-feedback"></p>
+            </form>
+        </div>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 FoodLogístic S.A. | Mataró.</p>
-            <div class="legal-links">
-                <a href="#" class="open-modal" data-modal="modal-avis">Avís Legal</a> | 
-                <a href="#" class="open-modal" data-modal="modal-privacitat">Política de Privacitat</a> | 
-                <a href="#" class="open-modal" data-modal="modal-cookies">Política de Cookies</a>
+        <div class="container footer-content">
+            <p>&copy; <span id="currentYear"></span> FoodLogístic S.A. Tots els drets reservats.</p>
+            <div class="footer-links">
+                <a href="#">Avís Legal</a> | 
+                <a href="#">Política de Privacitat</a> | 
+                <a href="#">Política de Cookies</a>
             </div>
         </div>
     </footer>
-
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Aquesta web utilitza cookies pròpies i de tercers. En continuar, acceptes la nostra 
-           <a href="#" class="open-modal" data-modal="modal-cookies">Política de Cookies</a>.</p>
-        <button id="accept-cookies" class="btn-cookie">Acceptar</button>
-    </div>
-
-    <div id="modal-avis" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Avís Legal</h2>
-            <div class="modal-body">
-                <p><strong>Identitat del responsable:</strong> FoodLogístic S.A.</p>
-                <p><strong>NIF:</strong> A-12345678</p>
-                <p><strong>Adreça:</strong> Polígon Industrial, Mataró (Barcelona)</p>
-                <p><strong>Finalitat del lloc web:</strong> Informar sobre els serveis logístics de l'empresa i permetre el contacte als usuaris.</p>
-                <p><strong>Mesures de seguretat:</strong> El responsable ha adoptat les mesures tècniques i organitzatives necessàries per garantir la seguretat de les dades i evitar la seva alteració, pèrdua, tractament o accés no autoritzat, d'acord amb la LOPDGDD i LSSI-CE.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-privacitat" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Política de Privacitat</h2>
-            <div class="modal-body">
-                <p><strong>Bases legals del tractament:</strong> El consentiment exprés de l'interessat en marcar la casella corresponent al formulari de contacte.</p>
-                <p><strong>Destinataris:</strong> Les dades no se cediran a tercers, excepte per obligació legal o prestadors de serveis necessaris per al manteniment web.</p>
-                <p><strong>Temps de conservació:</strong> Les dades es conservaran mentre es mantingui la relació comercial o durant els anys necessaris per complir amb les obligacions legals.</p>
-                <p><strong>Exercici de Drets ARSLOP:</strong> Vostè té dret a exercir els drets d'<strong>A</strong>ccés, <strong>R</strong>ectificació, <strong>S</strong>upressió, <strong>L</strong>imitació del tractament, <strong>O</strong>posició i <strong>P</strong>ortabilitat enviant un correu a <em>privacitat@foodlogistic.es</em> adjuntant còpia del seu DNI.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-cookies" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Política de Cookies</h2>
-            <div class="modal-body">
-                <p><strong>Què són les cookies?</strong> Un fitxer que es descarrega al seu ordinador en accedir a determinades pàgines web.</p>
-                <p><strong>Quines utilitzem?</strong></p>
-                <ul>
-                    <li><em>Cookies tècniques (pròpies):</em> Necessàries per a la navegació i el bon funcionament de la web.</li>
-                    <li><em>Cookies d'anàlisi (tercers - StatCounter):</em> Permeten quantificar el nombre d'usuaris per fer un mesurament estadístic de l'ús de la web.</li>
-                </ul>
-                <p><strong>Durada:</strong> Les cookies de sessió s'esborren en tancar el navegador; les persistents (com StatCounter) poden durar fins a 2 anys.</p>
-                <p><strong>Com rebutjar-les:</strong> Vostè pot permetre, bloquejar o eliminar les cookies mitjançant la configuració de les opcions del navegador instal·lat al seu ordinador.</p>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 
