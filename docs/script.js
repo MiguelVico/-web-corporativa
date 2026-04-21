@@ -1,36 +1,23 @@
-// Funcions per obrir i tancar modals
-function openModal(id) {
-    document.getElementById(id).style.display = "block";
-}
-
-function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-}
-
-// Tancar modal si es clica fora de la caixa blanca
-window.onclick = function(event) {
-    if (event.target.className === 'modal') {
-        event.target.style.display = "none";
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Banner de Cookies
+    // 1. Gestió del Banner de Cookies
     const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
+    const btnAcceptar = document.getElementById('accept-cookies');
 
-    if (!localStorage.getItem('cookies-foodlogistic')) {
-        banner.style.display = 'block';
+    // Comprovem si el banner existeix a la pàgina actual (només a index.html)
+    if (banner && btnAcceptar) {
+        if (!localStorage.getItem('foodlogistic-cookies-ok')) {
+            banner.style.display = 'block';
+        }
+
+        btnAcceptar.addEventListener('click', () => {
+            localStorage.setItem('foodlogistic-cookies-ok', 'true');
+            banner.style.display = 'none';
+        });
     }
 
-    acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookies-foodlogistic', 'true');
-        banner.style.display = 'none';
-    });
-
-    // Simulació formulari
+    // 2. Simulació de l'enviament del formulari
     const form = document.getElementById('form-contacte');
-    if(form) {
+    if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             document.getElementById('form-feedback').classList.remove('hidden');

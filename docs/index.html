@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodLogístic S.A. | Mataró</title>
+    <title>FoodLogístic S.A. | Logística Alimentària</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,20 +11,20 @@
 
     <div id="cookie-banner" class="cookie-overlay">
         <div class="cookie-content">
-            <p>FoodLogístic utilitza cookies pròpies i de tercers (StatCounter). Acceptes la nostra <a href="javascript:void(0)" onclick="openModal('modal-cookies')">Política de Cookies</a>?</p>
+            <p>Aquesta web utilitza cookies per millorar l'experiència. Més informació a la <a href="cookies.html">Política de Cookies</a>.</p>
             <div class="cookie-buttons">
-                <button id="accept-cookies" class="btn btn-primary">Acceptar</button>
+                <button id="accept-cookies" class="btn btn-primary">Acceptar totes</button>
             </div>
         </div>
     </div>
 
     <header>
-        <div class="container">
+        <div class="container header-content">
             <div class="logo"><h1>Food<span>Logistic</span></h1></div>
             <nav>
                 <ul>
                     <li><a href="#inici">Inici</a></li>
-                    <li><a href="#contacte" class="btn-nav">Contacte</a></li>
+                    <li><a href="#contacte" class="btn btn-primary" style="color:var(--dark);">Contacte</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,9 +32,8 @@
 
     <section id="inici" class="hero">
         <div class="container">
-            <h2>Logística Alimentària d'Alta Disponibilitat</h2>
-            <p>Solucions segures i adaptades a la normativa actual per a FoodLogístic S.A.</p>
-            <a href="#contacte" class="btn btn-primary">Contacta amb nosaltres</a>
+            <h2>Especialistes en distribució i alta disponibilitat</h2>
+            <p>Modernitzem la logística de FoodLogístic S.A. amb solucions segures i eficients.</p>
         </div>
     </section>
 
@@ -43,26 +42,27 @@
             <div class="contact-box">
                 <div class="contact-info">
                     <h2>Seu Central</h2>
-                    <p>Carrer de la Teixidora, 13<br>08302 Mataró (Barcelona)</p>
-                    <p>Tel: +34 935 55 55 55</p>
+                    <p>📍 Carrer de la Teixidora, 13, Mataró</p>
+                    <p>📞 +34 935 55 55 55</p>
+                    <p>✉️ info@foodlogistic.com</p>
                 </div>
                 <div class="contact-form">
                     <form id="form-contacte">
                         <input type="text" placeholder="Nom complet *" required>
                         <input type="email" placeholder="Correu electrònic *" required>
-                        <textarea placeholder="Missatge *" rows="3" required></textarea>
+                        <textarea placeholder="Missatge *" rows="4" required></textarea>
                         
                         <div class="form-group-checkbox">
                             <input type="checkbox" id="privacitat" required>
-                            <label for="privacitat">Accepto la <a href="javascript:void(0)" onclick="openModal('modal-privacitat')">Política de Privacitat</a> *</label>
+                            <label for="privacitat">Accepto la <a href="privacitat.html" target="_blank">Política de Privacitat</a> *</label>
                         </div>
                         <div class="form-group-checkbox">
                             <input type="checkbox" id="comunicacions">
-                            <label for="comunicacions">Accepto l'<a href="javascript:void(0)" onclick="openModal('modal-avis')">Avís Legal</a> i comunicacions.</label>
+                            <label for="comunicacions">Accepto l'enviament de comunicacions comercials i l'<a href="avis-legal.html" target="_blank">Avís Legal</a></label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary">Enviar sol·licitud</button>
                     </form>
-                    <div id="form-feedback" class="hidden">Missatge enviat!</div>
+                    <div id="form-feedback" class="hidden">Missatge enviat correctament!</div>
                 </div>
             </div>
         </div>
@@ -70,45 +70,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 FoodLogístic S.A.</p>
+            <p>&copy; 2026 FoodLogístic S.A. | Mataró</p>
             <div class="legal-links">
-                <a href="javascript:void(0)" onclick="openModal('modal-avis')">Avís Legal</a> | 
-                <a href="javascript:void(0)" onclick="openModal('modal-privacitat')">Privacitat</a> | 
-                <a href="javascript:void(0)" onclick="openModal('modal-cookies')">Cookies</a>
+                <a href="avis-legal.html">Avís Legal</a> | 
+                <a href="privacitat.html">Política de Privacitat</a> | 
+                <a href="cookies.html">Política de Cookies</a>
             </div>
         </div>
     </footer>
-
-    <div id="modal-avis" class="modal">
-        <div class="modal-body">
-            <span class="close" onclick="closeModal('modal-avis')">&times;</span>
-            <h2>Avís Legal</h2>
-            <p><strong>Titular:</strong> FoodLogístic S.A. (NIF A-12345678).<br>
-            <strong>Domicili:</strong> Carrer de la Teixidora, 13, Mataró.<br>
-            <strong>Registre:</strong> Reg. Mercantil de Barcelona, Tom 45678, Foli 120, Full B-567890.</p>
-            <p>L'ús d'aquesta web es regeix per la Llei 34/2002 (LSSI-CE). Els continguts són propietat de FoodLogístic S.A.</p>
-        </div>
-    </div>
-
-    <div id="modal-privacitat" class="modal">
-        <div class="modal-body">
-            <span class="close" onclick="closeModal('modal-privacitat')">&times;</span>
-            <h2>Política de Privacitat</h2>
-            <p>D'acord amb el RGPD i la LOPDGDD 3/2018:</p>
-            <p><strong>Responsable:</strong> FoodLogístic S.A. a Mataró.<br>
-            <strong>Finalitat:</strong> Gestió de consultes i serveis logístics.<br>
-            <strong>Drets:</strong> Pots exercir els drets d'accés, rectificació i supressió enviant un correu a info@foodlogistic.com.</p>
-        </div>
-    </div>
-
-    <div id="modal-cookies" class="modal">
-        <div class="modal-body">
-            <span class="close" onclick="closeModal('modal-cookies')">&times;</span>
-            <h2>Política de Cookies</h2>
-            <p>Aquesta web utilitza cookies tècniques i analítiques (StatCounter).</p>
-            <p>Les cookies analítiques ens ajuden a mesurar el trànsit de forma anònima. Pots desactivar-les des de la configuració del teu navegador.</p>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
