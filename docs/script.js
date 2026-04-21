@@ -1,22 +1,26 @@
-// Actualitza automàticament l'any del copyright al peu de pàgina
-document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', function() {
+    // --- GESTIÓ DE COOKIES ---
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
 
-// Gestió del Formulari de Contacte
-const contactForm = document.getElementById('contactForm');
-const formFeedback = document.getElementById('formFeedback');
+    // Comprovar si ja s'han acceptat abans
+    if (!localStorage.getItem('cookies-acceptades')) {
+        cookieBanner.style.display = 'block';
+    }
 
-contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que la pàgina es recarregui
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookies-acceptades', 'true');
+        cookieBanner.style.display = 'none';
+    });
 
-    // Aquí s'incorporaria la lògica d'enviament de dades en un cas real
-    
-    // Obtenim el nom de l'usuari
-    const nom = document.getElementById('nom').value;
-
-    // Simulem èxit de recepció
-    formFeedback.textContent = `Gràcies per contactar amb nosaltres, ${nom}. Hem rebut les teves dades i et respondrem aviat!`;
-    formFeedback.style.color = 'green';
-
-    // Resetejem el formulari
-    contactForm.reset();
+    // --- GESTIÓ FORMULARI ---
+    const form = document.getElementById('form-contacte');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulem enviament
+            document.getElementById('form-feedback').classList.remove('hidden');
+            form.reset();
+        });
+    }
 });
