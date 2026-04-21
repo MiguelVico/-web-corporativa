@@ -4,17 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodLogístic S.A. | Logística Alimentària</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS INTEGRAT PER EVITAR ERRORS DE CÀRREGA */
+        :root { --primary: #0a4f8f; --secondary: #00bfa5; --dark: #1e293b; --light: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { line-height: 1.6; color: var(--dark); background-color: var(--light); }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+        /* Capçalera */
+        header { background: #fff; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 { font-size: 1.8rem; color: var(--dark); }
+        .logo h1 span { color: var(--primary); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 600; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary); }
+
+        /* Botons */
+        .btn { display: inline-block; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: 600; cursor: pointer; border: none; transition: 0.3s; }
+        .btn-primary { background: var(--secondary); color: var(--dark); }
+        .btn-primary:hover { background: #00a892; transform: translateY(-2px); }
+
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(10, 79, 143, 0.85), rgba(10, 79, 143, 0.85)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000'); 
+            background-size: cover; 
+            background-position: center;
+            color: white; 
+            padding: 100px 0; 
+            text-align: center; 
+        }
+        .hero h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+
+        /* Contacte */
+        .contact { padding: 80px 0; }
+        .contact-box { display: flex; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .contact-info { flex: 1; padding: 50px; background: var(--primary); color: white; }
+        .contact-info h2 { margin-bottom: 30px; font-size: 2rem; }
+        .contact-info p { margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
+        
+        .contact-form { flex: 1.5; padding: 50px; background: white; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .contact-form textarea { grid-column: span 2; }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); }
+
+        .form-group-checkbox { display: flex; gap: 10px; margin-bottom: 15px; font-size: 0.9rem; align-items: flex-start; }
+        .form-group-checkbox a { color: var(--primary); font-weight: bold; text-decoration: none; }
+        .form-group-checkbox a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 40px 0; text-align: center; }
+        .legal-links { margin-top: 15px; }
+        .legal-links a { color: var(--secondary); margin: 0 10px; font-weight: bold; text-decoration: none; font-size: 0.9rem; }
+        .legal-links a:hover { text-decoration: underline; }
+
+        /* Banner de Cookies */
+        .cookie-overlay { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 800px; background: white; color: var(--dark); padding: 20px; z-index: 1000; display: none; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); border-left: 5px solid var(--secondary); }
+        .cookie-content { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .cookie-content p { font-size: 0.9rem; }
+        .cookie-content a { color: var(--primary); font-weight: bold; }
+
+        .hidden { display: none; color: #00bfa5; font-weight: bold; margin-top: 15px; padding: 10px; border: 1px solid #00bfa5; border-radius: 5px; text-align: center; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-box { flex-direction: column; }
+            .form-grid { grid-template-columns: 1fr; }
+            .contact-form textarea { grid-column: span 1; }
+        }
+    </style>
 </head>
 <body>
 
     <div id="cookie-banner" class="cookie-overlay">
         <div class="cookie-content">
-            <p>Aquesta web utilitza cookies per millorar l'experiència. Més informació a la <a href="cookies.html">Política de Cookies</a>.</p>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="btn btn-primary">Acceptar totes</button>
-            </div>
+            <p>Aquesta web utilitza cookies per millorar l'experiència. Pots llegir la <a href="cookies.html">Política de Cookies</a>.</p>
+            <button id="accept-cookies" class="btn btn-primary">Acceptar</button>
         </div>
     </div>
 
@@ -24,7 +94,7 @@
             <nav>
                 <ul>
                     <li><a href="#inici">Inici</a></li>
-                    <li><a href="#contacte" class="btn btn-primary" style="color:var(--dark);">Contacte</a></li>
+                    <li><a href="#contacte">Contacte</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +103,7 @@
     <section id="inici" class="hero">
         <div class="container">
             <h2>Especialistes en distribució i alta disponibilitat</h2>
-            <p>Modernitzem la logística de FoodLogístic S.A. amb solucions segures i eficients.</p>
+            <p>Modernitzem la logística de FoodLogístic S.A. amb solucions segures, eficients i adaptades a la normativa LOPD/LSSI.</p>
         </div>
     </section>
 
@@ -48,21 +118,23 @@
                 </div>
                 <div class="contact-form">
                     <form id="form-contacte">
-                        <input type="text" placeholder="Nom complet *" required>
-                        <input type="email" placeholder="Correu electrònic *" required>
-                        <textarea placeholder="Missatge *" rows="4" required></textarea>
+                        <div class="form-grid">
+                            <input type="text" placeholder="Nom complet *" required>
+                            <input type="email" placeholder="Correu electrònic *" required>
+                            <textarea placeholder="Missatge *" rows="4" required></textarea>
+                        </div>
                         
                         <div class="form-group-checkbox">
                             <input type="checkbox" id="privacitat" required>
-                            <label for="privacitat">Accepto la <a href="privacitat.html" target="_blank">Política de Privacitat</a> *</label>
+                            <label for="privacitat">Accepto la <a href="privacitat.html">Política de Privacitat</a> *</label>
                         </div>
                         <div class="form-group-checkbox">
                             <input type="checkbox" id="comunicacions">
-                            <label for="comunicacions">Accepto l'enviament de comunicacions comercials i l'<a href="avis-legal.html" target="_blank">Avís Legal</a></label>
+                            <label for="comunicacions">Accepto l'enviament de comunicacions comercials i l'<a href="avis-legal.html">Avís Legal</a></label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar sol·licitud</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar sol·licitud</button>
                     </form>
-                    <div id="form-feedback" class="hidden">Missatge enviat correctament!</div>
+                    <div id="form-feedback" class="hidden">✓ Missatge enviat correctament! Ens posarem en contacte aviat.</div>
                 </div>
             </div>
         </div>
@@ -79,6 +151,30 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gestió Cookies
+            const banner = document.getElementById('cookie-banner');
+            const btnAcceptar = document.getElementById('accept-cookies');
+
+            if (!localStorage.getItem('food-cookies-accepted')) {
+                banner.style.display = 'block';
+            }
+
+            btnAcceptar.addEventListener('click', () => {
+                localStorage.setItem('food-cookies-accepted', 'true');
+                banner.style.display = 'none';
+            });
+
+            // Gestió Formulari
+            const form = document.getElementById('form-contacte');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                document.getElementById('form-feedback').classList.remove('hidden');
+                form.style.opacity = '0.5';
+                form.style.pointerEvents = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
