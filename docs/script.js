@@ -1,24 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // --- GESTIÓ DE COOKIES ---
-    const cookieBanner = document.getElementById('cookie-banner');
+document.addEventListener('DOMContentLoaded', () => {
+    // Banner de Cookies
+    const banner = document.getElementById('cookie-banner');
     const acceptBtn = document.getElementById('accept-cookies');
 
-    // Comprovar si ja s'han acceptat abans
-    if (!localStorage.getItem('cookies-acceptades')) {
-        cookieBanner.style.display = 'block';
+    if (!localStorage.getItem('foodlogistic-cookies')) {
+        banner.style.display = 'block';
     }
 
     acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookies-acceptades', 'true');
-        cookieBanner.style.display = 'none';
+        localStorage.setItem('foodlogistic-cookies', 'true');
+        banner.style.display = 'none';
     });
 
-    // --- GESTIÓ FORMULARI ---
+    // Simulació Formulari
     const form = document.getElementById('form-contacte');
-    if (form) {
-        form.addEventListener('submit', function(e) {
+    if(form) {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Simulem enviament
             document.getElementById('form-feedback').classList.remove('hidden');
             form.reset();
         });

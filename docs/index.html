@@ -1,52 +1,86 @@
-<section id="contacte" class="contact">
-    <div class="container">
-        <div class="contact-box">
-            <div class="contact-info">
-                <h2>Vols saber-ne més?</h2>
-                <p>Estem a la vostra disposició a la seu central de Mataró.</p>
-                <div class="info-item">📍 Carrer de la Teixidora, 13, Mataró</div>
-                <div class="info-item">📞 +34 935 55 55 55</div>
-            </div>
-            <div class="contact-form">
-                <form id="form-contacte">
-                    <div class="form-group">
-                        <label for="nom">Nom comercial / Empresa *</label>
-                        <input type="text" id="nom" name="nom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correu electrònic *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="missatge">Missatge *</label>
-                        <textarea id="missatge" name="missatge" rows="3" required></textarea>
-                    </div>
-                    
-                    <div class="form-group-checkbox">
-                        <input type="checkbox" id="privacitat" name="privacitat" required>
-                        <label for="privacitat">He llegit i accepto la <a href="privacitat.html" target="_blank">Política de Privacitat</a>. *</label>
-                    </div>
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLogístic S.A. | Logística Alimentària</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-                    <div class="form-group-checkbox">
-                        <input type="checkbox" id="comunicacions" name="comunicacions">
-                        <label for="comunicacions">Accepto rebre comunicacions comercials i l'<a href="avis-legal.html" target="_blank">Avís Legal</a>.</label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Enviar sol·licitud</button>
-                </form>
-                <div id="form-feedback" class="hidden">El seu missatge ha estat enviat correctament seguint els protocols de seguretat.</div>
+    <div id="cookie-banner" class="cookie-overlay">
+        <div class="cookie-content">
+            <p>Aquesta web utilitza cookies per millorar l'experiència. Acceptes la nostra <a href="cookies.html">Política de Cookies</a>?</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn btn-primary">Acceptar</button>
+                <a href="cookies.html" class="btn btn-secondary">Més info</a>
             </div>
         </div>
     </div>
-</section>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2026 FoodLogístic S.A. | Mataró</p>
-        <div class="legal-links">
-            <a href="avis-legal.html">Avís Legal</a> | 
-            <a href="privacitat.html">Política de Privacitat</a> | 
-            <a href="cookies.html">Política de Cookies</a>
+    <header>
+        <div class="container">
+            <div class="logo"><h1>Food<span>Logistic</span></h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#inici">Inici</a></li>
+                    <li><a href="#serveis">Serveis</a></li>
+                    <li><a href="#contacte" class="btn-nav">Contacte</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</footer>
+    </header>
+
+    <section id="inici" class="hero">
+        <div class="container">
+            <h2>Especialistes en distribució i alta disponibilitat</h2>
+            <p>Modernitzem la logística de FoodLogístic S.A. amb solucions segures i eficients.</p>
+            <a href="#contacte" class="btn btn-primary">Sol·licitar pressupost</a>
+        </div>
+    </section>
+
+    <section id="contacte" class="contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2>Contacte</h2>
+                    <p>📍 Carrer de la Teixidora, 13, Mataró</p>
+                    <p>📞 +34 935 55 55 55</p>
+                </div>
+                <div class="contact-form">
+                    <form id="form-contacte">
+                        <input type="text" placeholder="Nom complet *" required>
+                        <input type="email" placeholder="Correu electrònic *" required>
+                        <textarea placeholder="Missatge *" rows="4" required></textarea>
+                        
+                        <div class="form-group-checkbox">
+                            <input type="checkbox" id="privacitat" required>
+                            <label for="privacitat">Accepto la <a href="privacitat.html">Política de Privacitat</a> *</label>
+                        </div>
+                        <div class="form-group-checkbox">
+                            <input type="checkbox" id="comunicacions">
+                            <label for="comunicacions">Accepto l'enviament de comunicacions comercials i l'<a href="avis-legal.html">Avís Legal</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                    <div id="form-feedback" class="hidden">Missatge enviat correctament!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 FoodLogístic S.A. | Mataró</p>
+            <div class="legal-links">
+                <a href="avis-legal.html">Avís Legal</a> | 
+                <a href="privacitat.html">Política de Privacitat</a> | 
+                <a href="cookies.html">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
