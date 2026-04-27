@@ -5,7 +5,7 @@ Aquesta és la web corporativa de [Nom de l'Empresa], una empresa fictícia dedi
 
 ## Demostració
 
-[🌐 URL de la web](https://github.com/MiguelVico/-web-corporativa)
+[🌐 URL de la web](https://miguelvico.github.io/-web-corporativa/)
 
 ## Tecnologies Utilitzades
 
