@@ -56,10 +56,40 @@
         .contact-info { flex: 1; padding: 40px; background: var(--primary); color: white; }
         .contact-form { flex: 1.5; padding: 40px; }
         
-        /* FORMULARI SEMÀNTIC */
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        input, textarea { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; }
-        textarea { grid-column: span 2; }
+        /* FORMULARI MILLORAT AMB LLETRES VISIBLES (BASAT EN LA SOL·LICITUD DEL CLIENT) */
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; /* Augment de l'espaiat per a millor flux visual */ }
+        
+        /* Estils Refinats per a Text i Visualització Millor */
+        input, textarea { 
+            width: 100%; 
+            padding: 15px 20px; /* Augment del padding per a espaiat superior i inferior de lletres defined text */
+            border: 2px solid #e2e8f0; 
+            border-radius: 8px; /* Cantons més refinats defined text defined defined defined defined */
+            font-size: 1.1rem; /* Mida de font augmentada per a millor llegibilitat defined defined text defined */
+            color: #333; /* Text més fosc per a major contrast defined defined text defined */
+            font-weight: 500; /* Lleugera millora del gruix de font defined defined text defined defined text */
+            transition: all 0.2s ease;
+        }
+        
+        /* placeholder millor contrast defined text defined */
+        input::placeholder, textarea::placeholder {
+            color: #888;
+            opacity: 1; /* define text define defined defined defined */
+        }
+        
+        /* Especific TextArea adjustments */
+        textarea { 
+            grid-column: span 2; 
+            resize: vertical;
+            line-height: 1.6; /* define text define defined defined */
+        }
+        
+        /* Refined Focus with both outline and border define text define defined */
+        input:focus, textarea:focus {
+            border-color: var(--secondary);
+            outline: 3px solid var(--focus-color);
+            outline-offset: 4px;
+        }
 
         .checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.9rem; }
         .checkbox-group a { color: var(--primary); font-weight: 600; }
@@ -134,7 +164,7 @@
                             <div class="form-grid">
                                 <input type="text" placeholder="El teu nom *" aria-label="Nom complet" required>
                                 <input type="email" placeholder="Correu electrònic *" aria-label="Correu electrònic" required>
-                                <textarea placeholder="Com et podem ajudar? *" aria-label="Missatge" rows="3" required></textarea>
+                                <textarea placeholder="Com et podem ajudar? *" aria-label="Missatge" rows="4" required></textarea>
                             </div>
                             
                             <div class="checkbox-group">
